@@ -22,3 +22,21 @@ Q. Why we need React Query ?
 4). Fetch data the traditional way using useEffect and useState hooks
 
 ## Lec 3 - Fetching Data with useQuery (8:51)
+
+# steps to use useQuery
+1). install useQuery 
+2). add react-query to react application,
+3). wrap root file (App.js) JSX to QueryClientProvider component,
+4). create an instance of query client,
+5). one QueryClientProvider component use query clinet instance in prop clinet as below 
+
+```javascript
+const queryClient = new QueryClient();
+<QueryClientProvider client={queryClient}>
+```
+
+# 'useQuery' hook requires atleast two arguments, 1). is a unique key to identify this query, 2). a function that returns a promise , in the example this function will make a 'get' request to json server.
+
+# 'useQuery' abstracts away all of the complexities to deal with state variables and side effect of useEffect hook and makes it really simple to fetch data in react component.
+
+# A commoan pattern that we can see when would work with 'useQuery' is the 'fetcher' function is extracted out of the 'useQuery' hook.

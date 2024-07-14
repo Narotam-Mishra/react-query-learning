@@ -44,3 +44,19 @@ const queryClient = new QueryClient();
 ## Lec 4 - Handling Query Error (4:21)
 
 # 'useQuery' hook return 'isError' and 'error' along with 'isLoading' and 'data' using which we can handle errors while fetching data using 'useQuery' hook. 
+
+## Lec 5 - React Query Devtools (5:12)
+
+# Another great feature of React Query is that it comes with dedicated dev tools. It help us to visualize all of the inner workings of react query and will likely save hours of debugging.
+
+# steps to add React Query Dev tool :-
+1). import the dev tool from the react query package in 'App.js' file
+2). use 'ReactQueryDevTools' component before query client provider in 'App.js'
+3). a small react-query dev tool icon will appear on bottom right side of screen, we can use that from there,
+
+# When we click on 'super-heros' within react-query dev tool on web page a panel opens to the right which gives more details about this query within action tab. Below action tab, there is option for 'Data Explorer' and 'Query Explorer'
+
+# Thus we can see dev tool makes it easier to identify our request in network panel and going through the response.
+
+
+

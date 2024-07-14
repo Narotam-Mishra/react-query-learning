@@ -40,3 +40,7 @@ const queryClient = new QueryClient();
 # 'useQuery' abstracts away all of the complexities to deal with state variables and side effect of useEffect hook and makes it really simple to fetch data in react component.
 
 # A commoan pattern that we can see when would work with 'useQuery' is the 'fetcher' function is extracted out of the 'useQuery' hook.
+
+## Lec 4 - Handling Query Error (4:21)
+
+# 'useQuery' hook return 'isError' and 'error' along with 'isLoading' and 'data' using which we can handle errors while fetching data using 'useQuery' hook. 

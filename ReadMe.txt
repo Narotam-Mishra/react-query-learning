@@ -58,5 +58,16 @@ const queryClient = new QueryClient();
 
 # Thus we can see dev tool makes it easier to identify our request in network panel and going through the response.
 
+## Lec 6 - Query Cache (8:05)
+
+# In React Query, by default every query result is cached for 5 minutes and react query further relies on that cache for subsequent requests.
+
+# The first time use query is fired for superheroes key where 'isLoading' is set to true and network request is sent to fetch the data, when request is completed it is cached using the query key and the fetch superheroes function as the unique identifiers.
+
+# If 'isLoading' is not changed does 'useQuery' provide another boolean flag to indicate the background refetching of the query?
+# Yes, and the flag is called 'isFetching'
+
+# If we wanted to change default caching time from 5 min to let say 10 min or 15 min then we can do this by passing third arguments to the 'useQuery' hook.
+
 
 

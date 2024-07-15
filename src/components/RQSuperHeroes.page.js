@@ -3,11 +3,15 @@ import React from 'react'
 import { useQuery } from 'react-query';
 
 const fetchSuperHeroes = () => {
-  return axios.get("http://localhost:4000/superheroes1")
+  return axios.get("http://localhost:4000/superheroes")
 }
 
 const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error } = useQuery('super-heroes', fetchSuperHeroes)
+  const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
+    cacheTime: 5000,
+  })
+
+  console.log(`Loading status: ${isLoading}, Fetch status: ${isFetching}`);
 
   if(isLoading){
     return <h2>Loading...</h2>

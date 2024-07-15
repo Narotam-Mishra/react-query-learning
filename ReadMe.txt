@@ -69,5 +69,17 @@ const queryClient = new QueryClient();
 
 # If we wanted to change default caching time from 5 min to let say 10 min or 15 min then we can do this by passing third arguments to the 'useQuery' hook.
 
+# One of the usage of caching the query results is being able to reuse the results for subsequent queries that will allow the user to view the prviously fetched data without having to view loading indicator every single time that leads to slightly better user experience.
+
+# Another use of 'useQuery' is to reduce the number of network requests for data that doesn't necessarily change too often.
+
+## Lec 7 - Stale Time (5:18)
+
+# Another use of 'useQuery' is to reduce the number of network requests for data that doesn't necessarily change too often.
+
+# Suppose list of superheroes does not change often and it is okay if user sees a stale data for a while, in such cases we can use the cached query results without having to refetch in the background. To achieve this behavior we configure another property called 'stale time'.
+
+# The default stale time is 0 second which is why previously every visit to the react query superheroes page would trigger a background refetch
+
 
 

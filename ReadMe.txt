@@ -81,5 +81,10 @@ const queryClient = new QueryClient();
 
 # The default stale time is 0 second which is why previously every visit to the react query superheroes page would trigger a background refetch
 
+## Lec 8 - Refetch Defaults (5:18)
+
+# Two more configurations related to refetching for which react query provides a default value , 1). refetch on mount, by defult it is set to true --> if it is set to ture then query will refetch on mount if the data is stale, if we set it to false then query will not fetch on mount, another value we can specify is 'always' in string which means irrespective of whether the query data is stale or not query will always refetch the data when the component mounts.
+2). another configuration is 'refetchOnWindowFocus' : remote data is synched with UI because of this option, bydefult it is set to true, if we set this option to false then query will not refetch on window focus or we can set it to the string always irrespective of whether the query data is stale or not
+
 
 

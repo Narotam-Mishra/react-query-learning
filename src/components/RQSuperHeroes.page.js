@@ -11,8 +11,13 @@ const RQSuperHeroesPage = () => {
   //   cacheTime: 5000,
   // })
 
+  // const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
+  //   staleTime: 30000,
+  // })
+
   const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
-    staleTime: 30000,
+    refetchOnMount: true,
+    refetchOnWindowFocus: true
   })
 
   // const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes)

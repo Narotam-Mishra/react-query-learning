@@ -7,36 +7,23 @@ const fetchSuperHeroes = () => {
 }
 
 const RQSuperHeroesPage = () => {
-  // const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
-  //   cacheTime: 5000,
-  // })
 
-  // const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
-  //   staleTime: 30000,
-  // })
+  const onSuccess = (data) => {
+    console.log("Perform side effect after data fetching:", data)
+  }
 
-  // const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
-  //   refetchOnMount: true,
-  //   refetchOnWindowFocus: true
-  // })
-
-  // const { isLoading, data, isError, error, isFetching } = useQuery(
-  //   "super-heroes",
-  //   fetchSuperHeroes,
-  //   {
-  //     refetchInterval: 2000,
-  //   }
-  // );
+  const onError = (error) => {
+    console.log("Perform side effect after encountering error", error)
+  }
 
   const { isLoading, data, isError, error, isFetching, refetch } = useQuery(
     "super-heroes",
     fetchSuperHeroes,
     {
-      enabled: false,
+      onSuccess,
+      onError
     }
   );
-
-  // const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes)
 
   console.log(`Loading status: ${isLoading}, Fetch status: ${isFetching}`);
 

@@ -103,3 +103,9 @@ const queryClient = new QueryClient();
 
 2). we will fetch data on click of a button but how
 # 'useQuery' returns a function called refetch to manually trigger the query, all we have to do is to pass it in 'onClick' handler method.
+
+## Lec 11 - Success and Error Callbacks (5:33)
+
+# Sometimes we might want to perform a side effect when the query completes. For example - opening a modal, navigating to a different route or even displaying toast notifications. To cater to these scenarios react query let us specify 'success' and error callbacks as configuration or options to the use query hook.
+
+# React Query automatically injects the data that has been fetched or the error that was encountered into these callbacks.

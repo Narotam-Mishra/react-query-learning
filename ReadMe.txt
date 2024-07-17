@@ -96,5 +96,10 @@ const queryClient = new QueryClient();
 
 # So, by using 'refetchInterval' and 'refetchIntervalInBackground' we can poll data and provide really good user experience in applications where the data changes every now and then.
 
+## Lec 10 - useQuery on click (4:00)
 
+# there are two steps needed to implement 'useQuery' on click
+1). to inform 'useQuery' not to fire the get request when the component mounts and we do that by passing in a configuration called enabled and setting it to false
 
+2). we will fetch data on click of a button but how
+# 'useQuery' returns a function called refetch to manually trigger the query, all we have to do is to pass it in 'onClick' handler method.

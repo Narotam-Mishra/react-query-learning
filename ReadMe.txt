@@ -109,3 +109,9 @@ const queryClient = new QueryClient();
 # Sometimes we might want to perform a side effect when the query completes. For example - opening a modal, navigating to a different route or even displaying toast notifications. To cater to these scenarios react query let us specify 'success' and error callbacks as configuration or options to the use query hook.
 
 # React Query automatically injects the data that has been fetched or the error that was encountered into these callbacks.
+
+## Lec 12 - Data Transformation (3:34)
+
+# While fetching data sometimes we need to transform data into a format that the frontend component can consume, the backend have their own convention and frontend have a different convention. To help with such scenarios, react query provides a 'select' configuration option which we can specify on the 'useQuery' hook.
+
+# 'select' is a function which automatically receives API data as an argument.

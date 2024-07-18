@@ -115,3 +115,9 @@ const queryClient = new QueryClient();
 # While fetching data sometimes we need to transform data into a format that the frontend component can consume, the backend have their own convention and frontend have a different convention. To help with such scenarios, react query provides a 'select' configuration option which we can specify on the 'useQuery' hook.
 
 # 'select' is a function which automatically receives API data as an argument.
+
+## Lec 13 - Custom Query Hook (6:12)
+
+# For large application, custom query hook can be very useful for code reusability purpose.
+
+# 

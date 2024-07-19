@@ -120,4 +120,13 @@ const queryClient = new QueryClient();
 
 # For large application, custom query hook can be very useful for code reusability purpose.
 
-# 
+## Lec 14 - Query by Id (15:40)
+
+# Query by Id setup setup
+1). Create a new page that will eventually display the details about one single super hero.
+
+2). Configure the route to that page and add a link from the super heroes list page to the super hero details page.
+
+3). Fetch a superhero by id and display the details in the UI.
+
+# queryKey is an array which mimics the array which we passed into useQuery

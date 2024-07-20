@@ -140,3 +140,9 @@ Q. How to resolve conflicts when we use parallel queries?
 
 a). const { data: superHeroes } = useQuery('super-heroes', fetchSuperHeroes)
 b). const { data: friends } = useQuery('friends', fetchFriends)
+
+## Lec 16 - Dynamic Parallel Queries (5:55)
+
+# If number of queries we need to execute is changing from render to render then we can't use manual queries as that would violate the rules of hooks. To cater to this specific scenario react query provides another hook called useQueries
+
+# In order to make parallel dynamic queries we use useQueries that returns an array of query results

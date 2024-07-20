@@ -11,8 +11,8 @@ const fetchFriends = () => {
 }
 
 const ParallelQueriesPage = () => {
-  const { data: superHeroes } = useQuery('super-heroes', fetchSuperHeroes)
-  const { data: friends } = useQuery('friends', fetchFriends)
+  useQuery('super-heroes', fetchSuperHeroes)
+  useQuery('friends', fetchFriends)
 
   return (
     <div>ParallelQueries.page</div>

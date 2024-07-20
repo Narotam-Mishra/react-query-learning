@@ -130,3 +130,13 @@ const queryClient = new QueryClient();
 3). Fetch a superhero by id and display the details in the UI.
 
 # queryKey is an array which mimics the array which we passed into useQuery
+
+## Lec 15 - Parallel Queries (5:25)
+
+# Sometimes a single component needs to call multiple APIs to fetch the necessary data, using react query it is as simple as calling useQuery twice.
+
+Q. How to resolve conflicts when we use parallel queries?
+# By using alias as below example 
+
+a). const { data: superHeroes } = useQuery('super-heroes', fetchSuperHeroes)
+b). const { data: friends } = useQuery('friends', fetchFriends)

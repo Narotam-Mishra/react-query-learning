@@ -145,4 +145,15 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 
 # If number of queries we need to execute is changing from render to render then we can't use manual queries as that would violate the rules of hooks. To cater to this specific scenario react query provides another hook called useQueries
 
-# In order to make parallel dynamic queries we use useQueries that returns an array of query results
+# In order to make parallel dynamic queries we use useQueries that returns an array of query results.
+
+## Lec 17 - Dependent Queries (9:15)
+
+# The best thing about parallel queries is that they can be executed in parallel so as to maximise feteching concurrency.
+
+# There are also certain scenarios where we need the queries to execute sequentially, i.e one after the other and this situation arises when we have one query dependent on the results of the another query.
+
+# Steps to implement Dependent Queries -
+1). getting hold of channel id based on user id,
+
+2). we use the channel id to fetch the channel courses.

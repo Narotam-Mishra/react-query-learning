@@ -157,3 +157,14 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 1). getting hold of channel id based on user id,
 
 2). we use the channel id to fetch the channel courses.
+
+## Lec 18 - Initial Query Data (8:22)
+
+# Entire loading state of the component can be eliminated and the data that is already present in the query cache from the previous query will be used to render partial data to the user. This is especially helpful when we have fetced above the fold data in the previous query. Initially, it would appear as though the data is fetched instantly while the data is in fact being fetched in the background.
+
+# Steps to implement above process :-
+1). we need access to the 'QueryClient' that we have set at the top level in root App component, for this react query provide another hook 'useQueryClient'.
+
+2). we will specify third argument to 'useQuery' which an object, the property is called 'initialData', that is method
+
+# If initial data is undefined, react query will set that query to a hard loading state thus saving us from a runtime error.

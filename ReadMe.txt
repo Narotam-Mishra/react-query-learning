@@ -168,3 +168,15 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 2). we will specify third argument to 'useQuery' which an object, the property is called 'initialData', that is method
 
 # If initial data is undefined, react query will set that query to a hard loading state thus saving us from a runtime error.
+
+
+## Lec 19 - Paginated Queries (9:02)
+
+# JSON server supports pagination, all we have to do is to provide query parameters.
+
+# Steps to implement pagination using JSON server
+1). we need to maintain a state variable for the page number,
+
+2). we utilize this page number to create unique queries,
+
+3). add 'next' and 'previous' buttons to change the page number

@@ -180,3 +180,14 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 2). we utilize this page number to create unique queries,
 
 3). add 'next' and 'previous' buttons to change the page number
+
+## Lec 20 - Infinite Queries (10:00)
+
+# Steps to implement infinite queries :-
+1). we need to make change to 'useQuery' hook. To cater to infinite queries we had query provides another hook called 'useInfiniteQuery', so we will import this hook.
+
+2). we focus on fetcher function. 'useInfiniteQuery' injects a couple of values into a fetcher function. For our example scenario, we just need the one value which is page param
+
+# To the 'useInfiniteQuery' hook we will provide a third argument 'getNextPageParam' which is a method that takes two arguments a). 'lastPage' & b). 'pages' that is array
+
+# 'getNextPageParam' method gives us property called 'hasNextPage' which will be true or false based on whether we return undefined or not.

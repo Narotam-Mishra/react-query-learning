@@ -1,79 +1,88 @@
 {
-    "superheroes": [
-        {
-            "id": 1,
-            "name": "Batman",
-            "alterego": "Bruce Wayne"
-        },
-        {
-            "id": 2,
-            "name": "Superman",
-            "alterego": "Clark Kent"
-        },
-        {
-            "id": 3,
-            "name": "Wonder Woman_pro",
-            "alterego": "Princess Diana"
-        }
-    ],
-    "friends": [
-        {
-            "id": 1,
-            "name": "Chandler Bing"
-        },
-        {
-            "id": 2,
-            "name": "Joey Tribbiani"
-        },
-        {
-            "id": 3,
-            "name": "Rachel Green"
-        }
-    ],
-    "users":[
-        {
-            "id": "dev.user@example.com",
-            "channelId": "devUser"
-        }
-    ],
-    "channels":[
-        {
-            "id": "devUser",
-            "courses": ["react", "angular", "vue"]
-        }
-    ],
-    "colors": [
-        {
-            "id": 1,
-            "label": "red"
-        },
-        {
-            "id": 2,
-            "label": "blue"
-        },
-        {
-            "id": 3,
-            "label": "green"
-        },
-        {
-            "id": 4,
-            "label": "yellow"
-        },
-        {
-            "id": 5,
-            "label": "black"
-        },
-        {
-            "id": 6,
-            "label": "white"
-        },
-        {
-            "id": 7,
-            "label": "orange"
-        },
-        {
-            "id": 8,
-            "label": "purple"
-        }
-    ]
-} 
+  "superheroes": [
+    {
+      "id": "1",
+      "name": "Batman",
+      "alterego": "Bruce Wayne"
+    },
+    {
+      "id": "2",
+      "name": "Superman",
+      "alterego": "Clark Kent"
+    },
+    {
+      "id": "3",
+      "name": "Wonder Woman_pro",
+      "alterego": "Princess Diana"
+    },
+    {
+      "id": "3e0a",
+      "name": "The Flash",
+      "alterEgo": "Barry Allen"
+    }
+  ],
+  "friends": [
+    {
+      "id": "1",
+      "name": "Chandler Bing"
+    },
+    {
+      "id": "2",
+      "name": "Joey Tribbiani"
+    },
+    {
+      "id": "3",
+      "name": "Rachel Green"
+    }
+  ],
+  "users": [
+    {
+      "id": "dev.user@example.com",
+      "channelId": "devUser"
+    }
+  ],
+  "channels": [
+    {
+      "id": "devUser",
+      "courses": [
+        "react",
+        "angular",
+        "vue"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": "1",
+      "label": "red"
+    },
+    {
+      "id": "2",
+      "label": "blue"
+    },
+    {
+      "id": "3",
+      "label": "green"
+    },
+    {
+      "id": "4",
+      "label": "yellow"
+    },
+    {
+      "id": "5",
+      "label": "black"
+    },
+    {
+      "id": "6",
+      "label": "white"
+    },
+    {
+      "id": "7",
+      "label": "orange"
+    },
+    {
+      "id": "8",
+      "label": "purple"
+    }
+  ]
+}

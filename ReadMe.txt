@@ -191,3 +191,15 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 # To the 'useInfiniteQuery' hook we will provide a third argument 'getNextPageParam' which is a method that takes two arguments a). 'lastPage' & b). 'pages' that is array
 
 # 'getNextPageParam' method gives us property called 'hasNextPage' which will be true or false based on whether we return undefined or not.
+
+## Lec 21 - Mutations (9:10)
+
+# Data posting aspect of React Query i.e sending data from your application to any backend.
+
+# Apart from 'get' request, JSON Server also supports 'post' request
+
+# In React Query, mutations are what we use to create, update or delete data and for this purpose similar to useQuery the library provides a useMutation hook.
+
+# 'useMutation' unlike useQuery doesn't necessarily need a key, so the first argument is the function which will post data to the backend.
+
+# The mutation function automatically receives any argument that we pass when we invoke the muatate function in the component.

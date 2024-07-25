@@ -206,7 +206,7 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 
 ## Lec 22 - Query Invalidation (3:38)
 
-# we want to automatically refetch superheroes query as soon as the mutation succeeds. We can do so using query invalidation.
+# If we want to automatically refetch superheroes query as soon as the mutation succeeds. We can do so using query invalidation.
 
 # Steps to implement query invalidation :-
 1). Get hold of the QueryClient instance, 
@@ -214,3 +214,17 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 2). then we need to get hold of the success callback on the use mutation hoousing invalidatek, the code within onSuccess callback executed as soon as mutation succeeds,
 
 3). then we invalidate the superheroes query method on the query client instance. By invalidating the query, react query will refetch the superheroes query.
+
+## Lec 23 - Handling Mutation Response (5:32)
+
+# It is pretty common for the new object to be automatically returned in the response of the mutation. So, instead of refetching a query for current object item and wasting a network call for data that we already have we can take advantage of the object returned by the mutation function and immediately update the existing query with the new data. For example - we can use the add-superheroes mutation response to update the superheroes data therby saving an additional network request.
+
+# Steps :-
+1). we will remove the `queryClient.invalidateQueries('super-heroes')`  line as we don't want the additional network request ,
+
+2). Now we will make use of the data returned from mutation,
+
+3). on queryClient instance we will call a method called 'setQueryData', this function is used to update the query cache, the first argument to the 'setQueryData' is the query key, the second argument is a function, this function automatically receives the old query data as an argument (old query data here refers to what is present in the query cache)
+
+# So, mutation response is little more verbose than query invalidation but it saves us from making additional network request.
+

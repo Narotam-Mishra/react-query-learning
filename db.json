@@ -24,6 +24,16 @@
       "id": "96cc",
       "name": "Shazam",
       "alterEgo": "Billy Batson"
+    },
+    {
+      "id": "7b2b",
+      "name": "Peaky Blinders",
+      "alterEgo": "Thomas Shelby"
+    },
+    {
+      "id": "2de2",
+      "name": "Bruce Wayne",
+      "alterEgo": "House of Robber"
     }
   ],
   "friends": [

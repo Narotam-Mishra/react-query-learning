@@ -203,3 +203,14 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 # 'useMutation' unlike useQuery doesn't necessarily need a key, so the first argument is the function which will post data to the backend.
 
 # The mutation function automatically receives any argument that we pass when we invoke the muatate function in the component.
+
+## Lec 22 - Query Invalidation (3:38)
+
+# we want to automatically refetch superheroes query as soon as the mutation succeeds. We can do so using query invalidation.
+
+# Steps to implement query invalidation :-
+1). Get hold of the QueryClient instance, 
+
+2). then we need to get hold of the success callback on the use mutation hoousing invalidatek, the code within onSuccess callback executed as soon as mutation succeeds,
+
+3). then we invalidate the superheroes query method on the query client instance. By invalidating the query, react query will refetch the superheroes query.

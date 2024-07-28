@@ -228,3 +228,16 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 
 # So, mutation response is little more verbose than query invalidation but it saves us from making additional network request.
 
+## Lec 24 - Optimistic Updates (8:30)
+
+# Optimistic updates implies updating the state before performing a mutation under the assumption that nothing can go wrong. It is typically done to give an impression that your app is blazing fast.
+
+# Steps to implement Optimistic updates :-
+1). Instead of onSuccess callback , we will use onMutate, onError & onSettled callbacks within useMutation hook
+
+1.a). onMutate callback is called before mutation function is fired and is passed the same variables the mutation function would receive,
+
+1.b). Implement onError callback for errors,
+
+1.c). onSettled - this callback is called if the mutation is either successful or when it encounters error 
+

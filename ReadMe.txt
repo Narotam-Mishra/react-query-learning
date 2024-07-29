@@ -232,12 +232,24 @@ b). const { data: friends } = useQuery('friends', fetchFriends)
 
 # Optimistic updates implies updating the state before performing a mutation under the assumption that nothing can go wrong. It is typically done to give an impression that your app is blazing fast.
 
+# While dealing with optimistic updates though we do have to cater to scenarios where the mutation can in fact error out.
+
 # Steps to implement Optimistic updates :-
-1). Instead of onSuccess callback , we will use onMutate, onError & onSettled callbacks within useMutation hook
+1). Instead of onSuccess callback, we will use onMutate, onError & onSettled callbacks within useMutation hook
 
-1.a). onMutate callback is called before mutation function is fired and is passed the same variables the mutation function would receive,
+2). define onMutate callback,
+2.a). onMutate callback is called before mutation function is fired and is passed the same variables the mutation function would receive, in this callback we will perform below tasks :-
+2.a.1). cancel any outgoing refetches so they don't overwrite our optimistic updates using 'cancelQueries' method from queryClient instance
 
-1.b). Implement onError callback for errors,
+2.a.2). get hold of current query data before we make any update, this will help us rollback in case mutation fails, to do this we will use 'getQueryData' method from queryClient instance, now we are set to update data,
 
-1.c). onSettled - this callback is called if the mutation is either successful or when it encounters error 
+3). Implement onError callback - this function is called if the mutation encounters an error, this function takes three arguments.
+
+4). onSettled - this callback is called if the mutation is either successful or when it encounters error, in this function all we have to do is to refetch the superheroes. 
+
+## Lec 25 - Axios Interceptor (6:12)
+
+# Axios Interceptor : Axios interceptors are a feature of the Axios library, a popular HTTP client for making requests in JavaScript, often used in web applications. Interceptors allow you to intercept and manipulate requests or responses before they are handled by then or catch methods.
+
+# React Query has nothing to do with axios interceptor however when we use axios for network requests, it is pretty common to have a base URL, the bearer token in the header, custom error handling.
 
